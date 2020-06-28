@@ -1,0 +1,365 @@
+% M.ahmadi 1395.11.28
+% دو بار پردازش با زی‌لاتک
+\PassOptionsToPackage{pdfpagemode=FullScreen,hyperfootnotes=false}{hyperref}
+\documentclass[10pt,xcolor=dvipsnames,professionalfont]{beamer}
+
+\usepackage{amsmath,amssymb,amsfonts} 
+\usepackage{tikz} 
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{ptext}
+
+\usetheme{Warsaw}
+\usefonttheme{serif}
+\usecolortheme[named=blue]{structure}
+\setbeamercovered{transparent}
+
+
+%% برای قرار گرفتن شماره اسلاید
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+\insertshorttitle\hfill%
+\inserttotalframenumber\,/\,\insertframenumber}
+ %%%%%%%%%%%%%%
+ %توجه: بسته هایی که نیاز هست قبل از بسته زی‌پرشین نوشته شود.
+\usepackage{xepersian}
+\settextfont{XB Zar}
+\setlatintextfont{Times New Roman}
+\setdigitfont{Yas}
+
+\defpersianfont\nas[Scale=1.5]{IranNastaliq}
+\defpersianfont\xb[Scale=1.3]{XB Zar}
+
+\deflatinfont\tnr[Scale=1.2]{Times New Roman}
+%\linespread{1.2} 
+
+%%%%%%%%%%%%%%%
+\definecolor{mygreen}{RGB}{28,172,0} 
+\definecolor{mylilas}{RGB}{170,55,241}
+\lstset{language=Matlab,
+    breaklines=true,basicstyle=\ttfamily\scriptsize,
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},
+    showstringspaces=false
+}
+
+% دستورات مورد نیاز برای استفاده از کلاس بیمر در command نوشته شده
+\input{command}
+\raggedleft
+%%%%%%%%%%%%%%%%%%
+\newcommand*{\co}[1]{\nas\textcolor{blue}{#1}}
+
+\title{ساخت مدل و آموزش آن به وسیله \lr{Keras}}
+\author[علیرضا بیکی]{\co{علیرضا بیکی}
+}
+\institute{دانشگاه شیراز}
+\date{\today}
+
+\logo{\includegraphics[scale=.04]{logo1.png} }
+\newcommand{\nologo}{\setbeamertemplate{logo}{}}
+%%%%%%%%%%%%%
+%برای شماره خوردن قضیه،...
+\setbeamertemplate{theorems}[numbered]
+%بولد
+\providetranslation{Theorem}{\large \bf قضیه}
+\providetranslation{Definition}{تعریف}
+\providetranslation{Example}{مثال}
+
+
+\begin{document}
+
+\begin{frame}
+\maketitle
+\end{frame}
+
+\begin{frame}{فهرست مطالب}
+\tableofcontents
+\end{frame}
+
+
+\section{ساخت مدل}
+
+
+\begin{frame}
+برای ساخت مدل در \lr{Keras} می‌توان از دو روش استفاده کرد:
+\begin{enumerate}
+\item
+\lr{Sequential}: 
+در این حالت یک مدل \lr{Sequential} درست می‌کنیم و به ترتیب لایه‌ها را به مدل اضافه می‌کنیم.
+\item
+\lr{Functional API}: 
+در این روش ما لایه‌ها را به دلخواه خود می‌سازیم سپس این لایه‌ها را در مسیری که باید تبدیل به مدل شود را ایجاد می‌کنیم. از مزیت‌های این روش این است که می‌توانیم مدل‌های غیرمرسوم مانند مدل‌هایی که چند ورودی یا چند خروجی دارند، مثل مدل \lr{Unet}، را تولید کنیم. 
+\end{enumerate}
+
+\end{frame}
+
+\subsection{ساخت مدل \lr{Sequential} در \lr{Keras}}
+\begin{frame}[fragile]{ساخت مدل \lr{Sequential} در \lr{Keras}}
+ابتدا با دستور زیر مدل \lr{Sequential} را وارد می‌کنیم:
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+from keras.model import Sequential
+\end{lstlisting}
+\end{latin}
+
+حال باید لایه‌های مورد نظر خود (مانند لایه‌های \lr{FC, CNN, RNN,  ...}) را ایجاد کنیم. برای این منظور لایه‌ مورد نظر را با دستور زیر وارد می‌کنیم:
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+from keras.layers import Dense
+\end{lstlisting}
+\end{latin}
+
+\begin{block}{توجه}
+لایه‌های \lr{Fully Connected} در \lr{Keras} تحت عنوان لایه‌های \lr{Dense} شناخته می‌شود.
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+حال مدل را با دستور زیر ایجاد می‌کنیم:
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+modelName=Sequential()
+\end{lstlisting}
+\end{latin}
+حالا لایه‌های مورد نظر را با دستور زیر اضافه می‌کنیم:
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+modelName.add(Dense(500, activation='relu', input_shape=(784,1)))
+\end{lstlisting}
+\end{latin}
+
+\begin{itemize}
+\item
+پارامتر اول (500) بیانگر تعداد نورون‌های ورودی را می‌خواهد.
+\vspace{0.5cm}
+
+\item
+پارامتر دوم، تابع \lr{activation} می‌باشد که به صورت پیش‌فرض مقدار \lr{None} دارد. برای مقداردهی به آن به 2 طریق می‌توان اقدام کرد:
+\begin{center}
+\begin{itemize}
+\item[-]
+همانند آنچه در بالا نشان داده شده است می‌توان نام تابع \lr{activation} را بین ` ` آورد.
+\item[-]
+تابع \lr{activation} را وارد کنیم و سپس نام آن را بدون ` ` بنویسیم.
+\end{itemize}
+\end{center}
+
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+from keras.activations import relu
+modelName.add(Dense(500, activation=relu, input_shape=(784,1)))
+\end{lstlisting}
+\end{latin}
+
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+modelName.add(Dense(500, activation='relu', input_shape=(784,1)))
+\end{lstlisting}
+\end{latin}
+
+\begin{itemize}
+\item
+پارامتر سوم تعداد نورون‌هایی هست که وارد لایه اول می‌شود ($784, 1$).
+\end{itemize}
+
+\begin{block}{نکته}
+این کار فقط برای لایه اول لازم است و برای لایه‌های بعدی نیاز نیست.
+\end{block}
+به‌طور مشابه می‌توان لایه‌های بعدی را نیز تولید کرد:
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+modelName.add(Dense(500, activation='relu'))
+modelName.add(Dense(10, activation='softmax'))
+\end{lstlisting}
+\end{latin}
+
+\begin{block}{نکته}
+معمولاً در خروجی از \lr{softmax} برای \lr{activation} استفاده می‌کنند.
+\end{block}
+
+\end{frame}
+
+\subsection{ساخت مدل با \lr{Functional API} در \lr{Keras}}
+
+\begin{frame}[fragile]{ساخت مدل با \lr{Functional API} در \lr{Keras}}
+
+
+\end{frame}
+
+\subsection{نکات تکمیلی}
+
+\begin{frame}[fragile]{نکات تکمیلی}
+با استفاده از دستور زیر می‌توان اطلاعات مختصری از مدل را نمایش داد:
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+modelName.summary()
+\end{lstlisting}
+\end{latin}
+وقتی که مدل را ساختیم، باز هم می‌توانیم به لایه‌های مدل دسترسی داشته باشیم و یا تغییراتی بر روی آن‌ها انجام دهیم.
+\begin{itemize}
+\item
+اگر بخواهیم نام لایه را تغییر بدهیم (لایه اول، برابر صفر است):
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+modelName.layers[0]='layer_0'
+\end{lstlisting}
+\end{latin}
+\item
+اگر بخواهیم لایه صفر در بحث آموزش شرکت نکند:
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+modelName.layers[0].trainable=False
+\end{lstlisting}
+\end{latin}
+
+\item
+تمام پارامترهای یک لایه را که ما می‌توانیم ببینیم یا تغییری بر رو آن‌ها انجام دهیم، به ما می‌‌دهد.
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+modelName.layers[0].get_config()
+\end{lstlisting}
+\end{latin}
+\end{itemize}
+
+\end{frame}
+
+
+\section{کامپایل کردن مدل}
+\begin{frame}[fragile]{کامپایل کردن مدل}
+آخرین مرحله از ساختن مدل این است که مدل را کامپایل کنیم و پارامترهایی که مدل نیاز دارد با به آن بدهیم.
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+modelName.compile(optimizer='SGD', loss=categorical_crossentropy, metric=[`accuracy`])
+\end{lstlisting}
+\end{latin}
+
+\begin{itemize}
+\item
+پارامتر اول تابع بهینه‌ساز می‌باشد که این نیز می‌تواند به 2 صورت استفاده شود:
+\begin{itemize}
+\item[-]
+همانند مثال، نام تابع بهینه‌سازی بین ` ` آورده شود.
+\item[-]
+تابع بهینه‌ساز وارد \lr{Keras} شود و بدون ` ` مورد استفاده قرار گیرد.
+\end{itemize}
+\end{itemize}
+\vspace{-0.5cm}
+
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+from keras.optimizer import SGD
+modelName.compile(optimizer=SGD(lr=0.001), loss=categorical_crossentropy, metric=[`accuracy`])
+\end{lstlisting}
+\end{latin}
+
+\begin{block}{نکته}
+تابع بهینه‌ساز خودش نیز دارای پارامترهای مانند \lr{Momentum}، \lr{learning rate}، \lr{decay} و \lr{nestrov} می‌باشد.
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]{کامپایل کردن مدل}
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+modelName.compile(optimizer='SGD', loss=categorical_crossentropy, metric=[`accuracy`])
+\end{lstlisting}
+\end{latin}
+\begin{itemize}
+\item
+پارامتر دوم تابع \lr{loss} می‌باشد که به صورت زیر وارد \lr{keras} می‌کنیم:
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+from keras.layers import categorical_crossentropy
+\end{lstlisting}
+\end{latin}
+\item
+در پارامتر سوم \lr{accuracy} به عنوان معیار نمایش دقت مدل به کار می‌رود.
+\end{itemize}
+
+\end{frame}
+
+\section{آموزش مدل}
+\begin{frame}[fragile]{آموزش مدل}
+برای آموزش مدل کافی است که از دستور \lr{fit} استفاده کنیم.
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+network_history=modelName.fit(x_train, y_train, batch_size=128, epoches=2, validation_split=0.2)
+\end{lstlisting}
+\end{latin}
+\vspace{-0.3cm}
+\begin{block}{نکته}
+برای اینکه بتوانیم پارامترهای آموزش را بررسی کنیم، آن‌ها را درون یک متغیر به نام \lr{network\_history} قرار می‌دهیم.
+\end{block}
+\begin{itemize}
+\item
+\lr{x\_train} ورودی
+\item
+\lr{y\_train} خروجی مورد نظر که ورودی ما باید با آن مقایسه شود.
+\item
+\lr{batch\_size} تعداد داده‌هایی که در هر دوره آموزش وارد می‌شوند.
+\item
+\lr{epoches} تعداد تکرارهای آزمایش
+\item
+\lr{validation\_split} 20 درصد داد‌ها را برای اعتبارسنجی کنار می‌گذارد و از 80 درصد داده‌ها برای آموزش مدل استفاده می‌کند.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{آموزش مدل}
+حال می‌خواهیم مدل آموزش دیده را بر روی داده‌های \lr{test} استفاده کنیم. این کار را می‌توان با دستورهای \lr{evaluate} و \lr{predict} انجام دهیم:
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+test_loss=modelName.evaluate(x_test, y_test)
+\end{lstlisting}
+\end{latin}
+با دستور \lr{predict} می‌توانیم داده‌های \lr{test} را به مدل بدهیم و خروجی آن را بخواهیم و ببینیم خروجی را چگونه پیش‌بینی می‌کند:
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+test_label=modelName.predict(x_test)
+\end{lstlisting}
+\end{latin}
+\end{frame}
+
+
+\section{لایه‌های Dropout}
+\begin{frame}[fragile]{لایه‌های Dropout}
+در خطا (\lr{loss}) جایی که نمودار \lr{train} شروع به کاهش کرد ولی نمودار \lr{validation} شروع به افزایش، آن نقطه‌ای است که احتمالاً دچار \lr{over fitting} شده است. تا اینجا باید \lr{epoch}ها را قطع کرد یا از تکنیک‌های همانند \lr{Dropout} استفاده کرد تا از \lr{over fitting} شدن جلوگیری کند.
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+from keras.models import Dropout
+modelName.add(Dropout(0.2))
+\end{lstlisting}
+\end{latin}
+این دستور به این معنی است که 20 درصد داده‌ها را از محاسبات خارج می‌کند.
+\begin{block}{نکته}
+لایه‌های \lr{Dropout} در شبکه‌های \lr{FC} معمولاً برای کاهش \lr{over fitting} استفاده می‌شود.
+\end{block}
+
+\begin{block}{نکته}
+با استفاده از لایه‌های \lr{Dropout} مقدار خطا کمی افزایش پیدا می‌کند ولی برای جلوگیری از \lr{over fitting} لازم است.
+\end{block}
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+\end{document}

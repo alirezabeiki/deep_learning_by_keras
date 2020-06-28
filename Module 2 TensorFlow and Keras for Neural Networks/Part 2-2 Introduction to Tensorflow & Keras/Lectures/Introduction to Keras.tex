@@ -1,0 +1,118 @@
+% دو بار پردازش با زی‌لاتک
+\PassOptionsToPackage{pdfpagemode=FullScreen,hyperfootnotes=false}{hyperref}
+\documentclass[10pt,xcolor=dvipsnames,professionalfont]{beamer}
+
+\usepackage{amsmath,amssymb,amsfonts} 
+\usepackage{tikz} 
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{ptext}
+
+\usetheme{Warsaw}
+\usefonttheme{serif}
+\usecolortheme[named=blue]{structure}
+\setbeamercovered{transparent}
+
+
+%% برای قرار گرفتن شماره اسلاید
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+\insertshorttitle\hfill%
+\inserttotalframenumber\,/\,\insertframenumber}
+ %%%%%%%%%%%%%%
+ %توجه: بسته هایی که نیاز هست قبل از بسته زی‌پرشین نوشته شود.
+\usepackage{xepersian}
+\settextfont{XB Zar}
+%\setlatintextfont{Times New Roman}
+\setdigitfont{Yas}
+
+\defpersianfont\nas[Scale=1.5]{IranNastaliq}
+\defpersianfont\xb[Scale=1.3]{XB Zar}
+
+%\deflatinfont\tnr[Scale=1.2]{Times New Roman}
+%\linespread{1.2} 
+
+%%%%%%%%%%%%%%%
+\definecolor{mygreen}{RGB}{28,172,0} 
+\definecolor{mylilas}{RGB}{170,55,241}
+\lstset{language=Matlab,
+    breaklines=true,basicstyle=\ttfamily\scriptsize,
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},
+    showstringspaces=false
+}
+
+% دستورات مورد نیاز برای استفاده از کلاس بیمر در command نوشته شده
+\input{command}
+\raggedleft
+%%%%%%%%%%%%%%%%%%
+\newcommand*{\co}[1]{\nas\textcolor{blue}{#1}}
+
+%%%%
+%%%%
+\title{یادگیری عمیق با کراس}
+\subtitle{مقدمه‌ای بر کراس}
+\author[علیرضا بیکی]{\co{علیرضا بیکی}}
+
+\institute{دانشگاه شیراز}
+\date{\today}
+
+%برای شماره خوردن قضیه،...
+\setbeamertemplate{theorems}[numbered]
+%بولد
+\providetranslation{Theorem}{\large \bf قضیه}
+\providetranslation{Definition}{تعریف}
+\providetranslation{Example}{مثال}
+
+
+\begin{document}
+
+\begin{frame}
+\maketitle
+\end{frame}
+
+\begin{frame}{فهرست مطالب}
+\tableofcontents
+\end{frame}
+
+
+\section{مقدمه‌ای بر کراس}
+
+\begin{frame}
+\frametitle{مقدمه‌ای بر کراس}
+\begin{itemize}
+\item
+کراس یک قالب کاری یادگیری عمیق سطح بالا برای پایتون بوده که شیوه راحتی برای تعریف و آموزش تقریبا هر نوع مدل یادگیری عمیق فراهم می‌کند.
+\vspace{0.5cm}
+\item
+\lr{TensorFlow, Theano} و \lr{CNTK} 
+سه پلتفورم اصلی یادگیری عمیق در حال حاضر هستند که هر کد نوشته شده توسط کراس را بدون هیچ تغییری در کد، می‌توان بر روی این موتورها اجرا کرد.
+\item
+\vspace{0.5cm}
+کراس از پایتون‌های ورژن $2.7$ تا $3.6$ پشتیبانی می‌کند.
+\vspace{0.5cm}
+\item
+کراس تحت لیسانس \lr{MIT} توزیع شده که امکان استفاده رایگان در پروژه‌های تجاری را می‌دهد.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{مقدمه‌ای بر کراس}
+کراس ویژگی‌های کلیدی زیر را دارد:
+\vspace{0.5cm}
+\begin{enumerate}
+\item
+یک \lr{API} کاربردوست می‌باشد که نمونه‌سازی سریع\LTRfootnote{fast prototyping} مدل‌های یادگیری عمیق را ممکن می‌سازد.
+\vspace{0.2cm}
+\item
+از شبکه‌های کانولوشنی\LTRfootnote{convolutional}، شبکه‌های بازگشتی\LTRfootnote{recurrent} و هر ترکیبی از این دو پشتیبانی می‌کند.
+\vspace{0.2cm}
+\item
+اجازه می‌دهد که یک کد به صورت یکپارچه بر روی \lr{CPU} و \lr{GPU} اجرا شود.
+\end{enumerate}
+\end{frame}
+
+\end{document}

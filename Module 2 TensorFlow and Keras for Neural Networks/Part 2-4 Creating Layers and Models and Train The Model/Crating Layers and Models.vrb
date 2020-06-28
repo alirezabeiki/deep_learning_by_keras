@@ -1,0 +1,17 @@
+\frametitle{لایه‌های Dropout}
+در خطا (\lr{loss}) جایی که نمودار \lr{train} شروع به کاهش کرد ولی نمودار \lr{validation} شروع به افزایش، آن نقطه‌ای است که احتمالاً دچار \lr{over fitting} شده است. تا اینجا باید \lr{epoch}ها را قطع کرد یا از تکنیک‌های همانند \lr{Dropout} استفاده کرد تا از \lr{over fitting} شدن جلوگیری کند.
+\begin{latin}
+\begin{lstlisting}[language=Python,frame=single,rulecolor=\color{magenta},numbers=left,numberstyle=\tiny]
+from keras.models import Dropout
+modelName.add(Dropout(0.2))
+\end{lstlisting}
+\end{latin}
+این دستور به این معنی است که 20 درصد داده‌ها را از محاسبات خارج می‌کند.
+\begin{block}{نکته}
+لایه‌های \lr{Dropout} در شبکه‌های \lr{FC} معمولاً برای کاهش \lr{over fitting} استفاده می‌شود.
+\end{block}
+
+\begin{block}{نکته}
+با استفاده از لایه‌های \lr{Dropout} مقدار خطا کمی افزایش پیدا می‌کند ولی برای جلوگیری از \lr{over fitting} لازم است.
+\end{block}
+

@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{ساخت مدل}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{ساخت مدل \lr {Sequential} در \lr {Keras}}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{ساخت مدل با \lr {Functional API} در \lr {Keras}}{7}{0}{1}
+\beamer@subsectionintoc {1}{3}{نکات تکمیلی}{8}{0}{1}
+\beamer@sectionintoc {2}{کامپایل کردن مدل}{9}{0}{2}
+\beamer@sectionintoc {3}{آموزش مدل}{11}{0}{3}
+\beamer@sectionintoc {4}{لایه‌های Dropout}{13}{0}{4}
