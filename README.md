@@ -3,25 +3,18 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 
-This repository created for Deep Learning and Deep Learning programming.
+## Some repositories about Deep Learning:
+
+### Frameworks
+* [tensorflow](https://github.com/tensorflow/tensorflow) - An Open Source Machine Learning Framework for Everyone.
+* [Keras](https://github.com/keras-team/keras) - Keras: Deep Learning for humans.
+* [tensorforce](https://github.com/tensorforce/tensorforce) - Tensorforce: a TensorFlow library for applied reinforcement learning.
 
 
-## Mian Folders:
+### Learning Source
+* [MIT Deep Learning Book](https://github.com/janishar/mit-deep-learning-book-pdf) - MIT Deep Learning Book in PDF format (complete and parts) by Ian Goodfellow, Yoshua Bengio and Aaron Courville.
+* [Deep-Learning-Papers](https://github.com/loliverhennigh/Deep-Learning-Papers) - A list of deep learning papers and notes on them.
 
-### Keras:
-This folder includes some slides about Keras (Currently in Persian) and some codes for training programming by Keras.
-
-### Numpy:
-This folder includes a Jupyter Notebook for learning Numpy.
-
-### Matplotlib:
-This folder includes a Jupyter Notebook for learning Matplotlib.
-
-### Pandas:
-This folder includes a Jupyter Notebook for learning Pandas.
-
-### seaborn:
-This folder includes a Jupyter Notebook for learning seaborn.
-
-### Sources:
-This folder is for some codes and some references.
+### Tutorials
+* [Keras-Tutorials](https://github.com/xingkongliang/Keras-Tutorials) - Keras-Tutorials.
+* [Keras-Tutorials](https://github.com/tgjeon/Keras-Tutorials) - Simple tutorials using Keras Framework.
