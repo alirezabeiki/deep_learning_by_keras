@@ -1,9 +1,9 @@
-# Module 8: Time Series in Keras
+# Module 6: Autoencoders
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 
-## Some paperas and codes about LSTM:
+## Some paperas and codes about Autoencoders:
 
 * [Memory-Efficient-Autoencoder](https://github.com/loliverhennigh/Memory-Efficient-Autoencoder) - A repo looking at autoencoders that can be applied to extremely large 2D and 3D tensors.
 * [Variational-autoencoder-tricks-and-tips](https://github.com/loliverhennigh/Variational-autoencoder-tricks-and-tips) - 
