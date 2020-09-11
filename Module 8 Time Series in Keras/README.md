@@ -23,9 +23,78 @@ An implementation of convolutional lstms in tensorflow. The code is written in t
 
 * [nothing](https://github.com/tukl-msd/hls-2dlstm) - When Massive GPU Parallelism Ain’t Enough A Novel Hardware Architecture of 2D-LSTM Neural Network, 2020.
 
-* [pytorch](https://github.com/NVlabs/conv-tt-lstm) - Convolutional Tensor-Train LSTM for Spatio-temporal Learning, 2020.
-
 * [TensorFlow](https://github.com/Yunbo426/predrnn-pp) - PredRNN++: Towards A Resolution of the Deep-in-Time Dilemma in Spatiotemporal Predictive Learning, 2018
 
 * [TensorFlow](https://github.com/google/e3d_lstm) - Eidetic 3D LSTM: A Model for Video Prediction and Beyond, 2019.
+
+* [TensorFlow](https://github.com/matinhosseiny/Inception-inspired-LSTM-for-Video-frame-Prediction) - Inception-inspired LSTM for Next-frame Video Prediction, 2020.
+
+* [TensorFlow](https://github.com/s3pku/Next_areal_location_predict) - A BiLSTM-CNN model for predicting users’ next locations based on geotagged social media, 2020.
+
+* [Nothing](https://github.com/Bei-Jin/STMFANet) - Exploring Spatial-Temporal Multi-Frequency Analysis for High-Fidelity and Temporal-Consistency Video Prediction, 2020.
+
+* [TensorFlow](https://github.com/tumeteor/neurips2019challenge) - Spatiotemporal Tile-based Attention-guided LSTMs for Traffic Video Prediction, 2020.
+
+* [pytorch](https://github.com/NVIDIA/flownet2-pytorch) - Looking-Ahead: Neural Future Video Frame Prediction, 2019.
+
+
+## Some paperas and codes about GRU:
+
+* [Theano](https://github.com/jych/librnn) - Empirical Evaluation of Gated Recurrent Neural Networks, 2014.
+
+
+
+## Some paperas and codes about RNN:
+
+* [pytorch](https://github.com/DSE-MSU/R-transformer) - R-Transformer: Recurrent Neural Network Enhanced Transformer, 2019.
+
+* [TensorFlow](https://github.com/HansikaPH/time-series-forecasting) - Recurrent Neural Networks for Time Series Forecasting: Current Status and Future Directions, 2019.
+
+
+## Some paperas and codes about ConvLSTM:
+
+* [TensorFlow](https://github.com/remega/OMCNN_2CLSTM) - Predicting Video Saliency with Object-to-Motion CNN and Two-layer Convolutional LSTM, 2019.
+
+* [pytorch](https://github.com/NVlabs/conv-tt-lstm) - Convolutional Tensor-Train LSTM for Spatio-temporal Learning, 2020.
+
+* [TensorFlow](https://github.com/NellyElsayed/rgcLSTM) - Reduced-Gate Convolutional LSTM Architecture for Next-Frame Video Prediction Using Predictive Coding, 2019.
+
+* [TensorFlow](https://github.com/mingkuan94/Thesis_ConvLSTM) - Sequential Images Prediction Using Convolutional LSTM with Application in Precipitation Nowcasting, 2019.
+
+* [TensorFlow](https://github.com/GuangmingZhu/ConvLSTMForGR) - Redundancy and Attention in Convolutional LSTM for Gesture Recognition, 2019.
+
+
+## Some paperas and codes about RGNN:
+
+* [TensorFlow](https://github.com/IuliaDuta/RSTG) - Recurrent Space-time Graph Neural Networks, 2019.
+
+* []() - STGAT: Spatial-Temporal Graph Attention Networks for Traffic Flow Forecasting, 2016.
+
+* [Pytorch](https://github.com/sbonner0/temporal-neighbourhood-aggregation) - Temporal Neighbourhood Aggregation Predicting Future Links in Temporal Graphs via Recurrent Variational Graph Convolutions, 2019.
+
+
+## Some paperas and codes about TCN:
+
+* [pytorch](https://github.com/rajatsen91/deepglo) - Think Globally, Act Locally: A Deep Neural Network Approach to High-Dimensional Time Series Forecasting, 2019.
+
+* [pytorch](https://github.com/locuslab/TCN) - An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling, 2018.
+
+
+
+
+
+
+STGAT Spatial-Temporal Graph Attention Networks for Traffic Flow Forecastin
+
+
+
+
+
+
+
+
+
+
+
+
 
