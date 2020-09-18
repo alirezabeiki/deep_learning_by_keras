@@ -41,7 +41,8 @@ An implementation of convolutional lstms in tensorflow. The code is written in t
 ## Some paperas and codes about GRU:
 
 * [Theano](https://github.com/jych/librnn) - Empirical Evaluation of Gated Recurrent Neural Networks, 2014.
-
+* [Python](https://github.com/sxjscience/HKO-7) - Deep learning for precipitation nowcasting: A benchmark and a new model, 2017.
+* [Pytorch](https://github.com/Hzzone/Precipitation-Nowcasting) - Deep learning for precipitation nowcasting: A benchmark and a new model, 2017.
 
 
 ## Some paperas and codes about RNN:
