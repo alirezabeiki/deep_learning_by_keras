@@ -5,7 +5,12 @@
 
 ## Some paperas and codes about Autoencoders:
 
-* [Memory-Efficient-Autoencoder](https://github.com/loliverhennigh/Memory-Efficient-Autoencoder) - A repo looking at autoencoders that can be applied to extremely large 2D and 3D tensors.
-* [Variational-autoencoder-tricks-and-tips](https://github.com/loliverhennigh/Variational-autoencoder-tricks-and-tips) - 
-just a few trouble shooting tips I have found for training variational autoencoders. All code in tensorflow.
-* [All-Convnet-Autoencoder-Example](https://github.com/loliverhennigh/All-Convnet-Autoencoder-Example) - Just a simple use example of the conv2d_transpose function in TensorFlow. Its run on MNIST.
+* [TensorFlow](https://github.com/nicola-decao/s-vae-tf) - Hyperspherical Variational Auto-Encoders, 2018.
+
+* [TensorFlow](https://github.com/wnhsu/ScalableFHVAE) - Scalable Factorized Hierarchical Variational Autoencoder Training, 2018.
+
+* [TensorFlow](https://github.com/danielegrattarola/ccm-aae) - Adversarial autoencoders with constant-curvature latent manifolds, 2019.
+
+* [Pytorch](https://github.com/jiacheng-xu/vmf_vae_nlp) - Spherical Latent Spaces for Stable Variational Autoencoders, 2018.
+
+* [Pytorch](https://github.com/riannevdberg/sylvester-flows) - Sylvester Normalizing Flows for Variational Inference, 2019.
