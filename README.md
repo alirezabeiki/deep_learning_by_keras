@@ -18,3 +18,6 @@
 ### Tutorials
 * [Keras-Tutorials](https://github.com/xingkongliang/Keras-Tutorials) - Keras-Tutorials.
 * [Keras-Tutorials](https://github.com/tgjeon/Keras-Tutorials) - Simple tutorials using Keras Framework.
+
+## Loss and Optimization Function:
+*[L4 stepsize adaptation scheme proposed by Rolinek, Martius (2018)](https://github.com/danielegrattarola/keras-l4) - L4 Practical loss-based stepsize adaptation for deep learning, 2018.
