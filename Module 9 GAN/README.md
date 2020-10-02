@@ -3,6 +3,10 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 
+## Must-read papers on GNN
+
+* [GNNPapers](https://github.com/thunlp/GNNPapers) - Must-read papers on GNN
+
 ## Libraries:
 
 * [Pytorch](https://github.com/rusty1s/pytorch_geometric) - PyTorch Geometric (PyG)
