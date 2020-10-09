@@ -3,6 +3,10 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 
+## Must-read papers on GNN
+
+* [GNNPapers](https://github.com/thunlp/GNNPapers) - Must-read papers on GNN
+
 
 ## Some paperas and codes about CNN:
 
@@ -28,6 +32,8 @@
 
 ## Some paperas and codes about Graph CNN:
 
+* [TensorFlow](https://github.com/danielegrattarola/keras-gat) - Graph Attention Networks, 2018
+
 * [TensorFlow](https://github.com/zhengchuanpan/GMAN) - GMAN A Graph Multi-Attention Network for Traffic Prediction, 2020.
 
 * [TensorFlow](https://github.com/danielegrattarola/spektral) - Graph Neural Networks in TensorFlow and Keras with Spektral, 2020.
@@ -36,7 +42,13 @@
 
 * [Pytorch](https://github.com/LeiBAI/AGCRN) - Adaptive Graph Convolutional Recurrent Network for Traffic Forecasting, 2020.
 
-* []() - 
+
+
+## GCN Libraries:
+
+* [Pytorch](https://github.com/rusty1s/pytorch_geometric) - PyTorch Geometric (PyG)
+
+* [TensorFlow](https://github.com/danielegrattarola/spektral) - Spektral
 
 
 
