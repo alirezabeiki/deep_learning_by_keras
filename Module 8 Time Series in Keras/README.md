@@ -60,6 +60,8 @@ An implementation of convolutional lstms in tensorflow. The code is written in t
 
 * [pytorch](https://github.com/NVlabs/conv-tt-lstm) - Convolutional Tensor-Train LSTM for Spatio-temporal Learning, 2020.
 
+* [Pytorch](https://github.com/CJHJ/convolutional-neural-markov-model) - 2D Convolutional Neural Markov Models for Spatiotemporal Sequence Forecasting, 2020.
+
 * [TensorFlow](https://github.com/remega/OMCNN_2CLSTM) - Predicting Video Saliency with Object-to-Motion CNN and Two-layer Convolutional LSTM, 2019.
 
 * [TensorFlow](https://github.com/NellyElsayed/rgcLSTM) - Reduced-Gate Convolutional LSTM Architecture for Next-Frame Video Prediction Using Predictive Coding, 2019.
@@ -69,7 +71,7 @@ An implementation of convolutional lstms in tensorflow. The code is written in t
 * [TensorFlow](https://github.com/GuangmingZhu/ConvLSTMForGR) - Redundancy and Attention in Convolutional LSTM for Gesture Recognition, 2019.
 
 
-## Some paperas and codes about RGNN:
+## Some papers and codes about RGNN:
 
 * [TensorFlow](https://github.com/IuliaDuta/RSTG) - Recurrent Space-time Graph Neural Networks, 2019.
 
@@ -78,7 +80,7 @@ An implementation of convolutional lstms in tensorflow. The code is written in t
 * [Pytorch](https://github.com/sbonner0/temporal-neighbourhood-aggregation) - Temporal Neighbourhood Aggregation Predicting Future Links in Temporal Graphs via Recurrent Variational Graph Convolutions, 2019.
 
 
-## Some paperas and codes about TCN:
+## Some papers and codes about TCN:
 * [TensorFlow](https://github.com/philipperemy/keras-tcn) - Keras Temporal Convolutional Network.
 
 * [pytorch](https://github.com/rajatsen91/deepglo) - Think Globally, Act Locally: A Deep Neural Network Approach to High-Dimensional Time Series Forecasting, 2019.
@@ -86,6 +88,8 @@ An implementation of convolutional lstms in tensorflow. The code is written in t
 * [pytorch](https://github.com/locuslab/TCN) - An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling, 2018.
 
 
+## some papers and codes about  State-Frequency Memory Recurrent Neural Networks
+* [TensorFlow](https://github.com/dlarsen5/AdaptiveSFM) - State-Frequency Memory Recurrent Neural Networks, 2017.
 
 
 
