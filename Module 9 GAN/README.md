@@ -3,24 +3,11 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 
-## Must-read papers on GNN
-
-* [GNNPapers](https://github.com/thunlp/GNNPapers) - Must-read papers on GNN
-
-## Libraries:
-
-* [Pytorch](https://github.com/rusty1s/pytorch_geometric) - PyTorch Geometric (PyG)
-
-* [TensorFlow](https://github.com/danielegrattarola/spektral) - Spektral
-
-
 ## Some paperas and codes about GAN:
 
 * [Pytorch](https://github.com/TUM-LMF/FutureGAN) - FutureGAN: Anticipating the Future Frames of Video Sequences using Spatio-Temporal 3d Convolutions in Progressively Growing GANs, 2018.
 
 * [TensorFlow](https://github.com/nicola-decao/MolGAN) - MolGAN An implicit generative model for small molecular graphs, 2018.
-
-* [TensorFlow](https://github.com/danielegrattarola/keras-gat) - Graph Attention Networks, 2018
 
 * [TensorFlow](https://github.com/abhinavsagar/hrvgan) - HRVGAN High Resolution Video Generation using Spatio-Temporal GAN, 2020.
 
