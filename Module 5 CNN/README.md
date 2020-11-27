@@ -9,23 +9,29 @@
 
 
 ## CNN:
+* [TensorFlow](https://github.com/perslev/Autofocus-Layer-TF) - Autofocus Layer for Semantic Segmentation, 2018.
 * [TensorFlow](https://github.com/meisamrf/racnn) - Radius Adaptive Convolutional Neural Network, 2019.
+* [Pytorch](https://github.com/yaq007/Autofocus-Layer) - Autofocus Layer for Semantic Segmentation, 2018.
 * [Pytorch](https://github.com/pytorch/fairseq) - CNNs found to jump around more skillfully than RNNs Compositional generalization in seq2seq convolutional networks, 2019.
 * [Pytorch](https://github.com/sriprabhar/DC-WCNN) - DC-WCNN A Deep Cascade of Wavelet Based Convolutional Neural Networks for MR Image Reconstruction, 2020.
 
 
- ## U-Net
- * [TensorFlow](https://github.com/SimonKohl/probabilistic_unet) - 2019 A Probabilistic U-Net for Segmentation of Ambiguous Images, 2019.
- * [TensorFlow](https://github.com/rezazad68/BCDU-Net) - Bi-Directional ConvLSTM U-Net with Densley Connected Convolutions, 2019.
- * [TensorFlow](https://github.com/SZUHvern/D-UNet) - D-UNet a dimension-fusion U shape network for chronic stroke lesion segmentation, 2019.
- * [TensorFlow](https://github.com/perslev/U-Time) - U-Time A Fully Convolutional Network for Time Series Segmentation Applied to Sleep Staging, 2019.
- * [TensorFlow](https://github.com/weihao94/BUSU-Net) - BUSU-Net An Ensemble U-Net Framework for Medical Image Segmentation, 2020.
+## U-Net
+* [TensorFlow](https://github.com/SimonKohl/probabilistic_unet) - 2019 A Probabilistic U-Net for Segmentation of Ambiguous Images, 2019.
+* [TensorFlow](https://github.com/rezazad68/BCDU-Net) - Bi-Directional ConvLSTM U-Net with Densley Connected Convolutions, 2019.
+* [TensorFlow](https://github.com/SZUHvern/D-UNet) - D-UNet a dimension-fusion U shape network for chronic stroke lesion segmentation, 2019.
+* [TensorFlow](https://github.com/perslev/U-Time) - U-Time A Fully Convolutional Network for Time Series Segmentation Applied to Sleep Staging, 2019.
+* [TensorFlow](https://github.com/perslev/MultiPlanarUNet) - One Network to Segment Them All A General, Lightweight System for Accurate 3D Medical Image Segmentation, 2019.
+* [TensorFlow](https://github.com/weihao94/BUSU-Net) - BUSU-Net An Ensemble U-Net Framework for Medical Image Segmentation, 2020.
  
- ## Deeplabv
- * [TensorFlow](https://github.com/rezazad68/AttentionDeeplabv3p) - Attention Deeplabv3+ Multi-level Context Attention Mechanism for Skin Lesion Segmentation, 2020.
+## Deeplabv
+* [TensorFlow](https://github.com/rezazad68/AttentionDeeplabv3p) - Attention Deeplabv3+ Multi-level Context Attention Mechanism for Skin Lesion Segmentation, 2020.
  
- ## ConvNets
+## ConvNets
 * [Pytorch](https://github.com/NVIDIA/MinkowskiEngine) - 4D Spatio-Temporal ConvNets: Minkowski Convolutional Neural Networks, 2019.
+
+## PeleeNet
+* [TensorFlow](https://github.com/koshian2/PeleeNet-Keras) - Pelee A Real-Time Object Detection System on Mobile Devices, 2018.
 
 
 ## Super Resolution:
