@@ -12,13 +12,17 @@ An implementation of convolutional lstms in tensorflow. The code is written in t
 ## Some paperas and codes about LSTM:
 
 * [TensorFLow](https://github.com/lucaslingle/hm_lstm) - Hierarchical Multiscale Recurrent Neural Networks, 2016.
+* [TensorFLow](https://github.com/jayvischeng/MSLSTM) - MS-LSTM a Multi-Scale LSTM Model for BGP Anomaly Detection, 2016.
 * [TensorFLow](https://github.com/lucaslingle/multiplicative-lstm-tensorflow) - Multiplicative LSTM for sequence modelling, 2017.
+* [TensorFLow](https://github.com/bolducp/hierarchical-rnn) - Hierarchical Multiscale Recurrent Neural Networks, 2017
 * [TensorFLow](https://github.com/jthsieh/DDPAE-video-prediction) - Learning to Decompose and Disentangle Representations for Video Prediction, 2018.
-* [TensorFlow](https://github.com/Yunbo426/predrnn-pp) - PredRNN++: Towards A Resolution of the Deep-in-Time Dilemma in Spatiotemporal Predictive Learning, 2018
+* [TensorFlow](https://github.com/Yunbo426/predrnn-pp) - PredRNN++: Towards A Resolution of the Deep-in-Time Dilemma in Spatiotemporal Predictive Learning, 2018.
+* [TensorFlow](https://github.com/gentaiscool/lstm-attention) - Attention-Based LSTM for Psychological Stress Detection from Spoken Language Using Distant Supervision, 2018.
 * [TensorFlow](https://github.com/houshd/LSTM-FCN) - Insights Into LSTM Fully Convolutional Networks for Time Series Classification, 2019.
 * [TensorFlow](https://github.com/jianz94/e-lstm-d) - E-LSTM-D A Deep Learning Framework for Dynamic Network Link Prediction, 2019.
 * [TensorFlow](https://github.com/titu1994/MLSTM-FCN) - Multivariate LSTM-FCNs for Time Series Classification, 2019.
 * [TensorFlow](https://github.com/google/e3d_lstm) - Eidetic 3D LSTM: A Model for Video Prediction and Beyond, 2019.
+* [TensorFlow](https://github.com/michetonu/DA-RNN_manoeuver_anticipation) - Robust and subject-independent driving manoeuvre anticipation through Domain-Adversarial Recurrent Neural Networks, 2019.
 * [TensorFlow](https://github.com/matinhosseiny/Inception-inspired-LSTM-for-Video-frame-Prediction) - Inception-inspired LSTM for Next-frame Video Prediction, 2020.
 * [TensorFlow](https://github.com/s3pku/Next_areal_location_predict) - A BiLSTM-CNN model for predicting users’ next locations based on geotagged social media, 2020.
 * [TensorFlow](https://github.com/tumeteor/neurips2019challenge) - Spatiotemporal Tile-based Attention-guided LSTMs for Traffic Video Prediction, 2020.
