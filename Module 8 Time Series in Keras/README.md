@@ -29,11 +29,13 @@ An implementation of convolutional lstms in tensorflow. The code is written in t
 
 * [TensorFlow](https://github.com/tumeteor/neurips2019challenge) - Spatiotemporal Tile-based Attention-guided LSTMs for Traffic Video Prediction, 2020.
 
-* [pytorch](https://github.com/olivesgatech/TS-LSTM-and-Temporal-Inception) - TS-LSTM and temporal-inception: Exploiting spatiotemporal dynamics for activity recognition, 2018.
-
 * [pytorch](https://github.com/karpathy/neuraltalk) - A parallel-fusion RNN-LSTM architecture for image caption generation, 2016.
 
-* [pytorch](https://github.com/olivesgatech/TS-LSTM-and-Temporal-Inception) - TS-LSTM and temporal-inception Exploiting spatiotemporal dynamics for activity recognition, 2018.
+* [pytorch](https://github.com/olivesgatech/TS-LSTM-and-Temporal-Inception) - TS-LSTM and temporal-inception: Exploiting spatiotemporal dynamics for activity recognition, 2018.
+
+* [pytorch](https://github.com/flennerhag/alstm) -  Breaking the Activation Function Bottleneck through Adaptive Parameterization, 2018.
+
+* [pytorch](https://github.com/jthsieh/DDPAE-video-prediction) - Learning to Decompose and Disentangle Representations for Video Prediction, 2018.
 
 * [pytorch](https://github.com/NVIDIA/flownet2-pytorch) - Looking-Ahead: Neural Future Video Frame Prediction, 2019.
 
